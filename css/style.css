@@ -9792,6 +9792,55 @@ textarea.form-control {
   justify-content: center;
   gap: 20px; /* Add space between cards */
 }
+
+#home-section {
+  padding: 100px 0;
+}
+
+#home-section .text {
+  color: #fff;
+  z-index: 2;
+}
+
+#home-section .text h1 span {
+  color: #f4c04e; /* Highlighted color */
+}
+
+#home-section .img {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+  min-height: 500px; /* Ensure it fills the height */
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+
+/***/
+
+.ftco-about .img-about {
+  height: 100%; /* Match the height of the parent container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-about img {
+  max-height: 100%; /* Prevents the image from exceeding container height */
+  width: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Adds rounded corners */
+}
+
+.row.d-flex {
+  display: flex;
+  align-items: stretch; /* Ensures children match the tallest element */
+}
+
+
   
 
 
