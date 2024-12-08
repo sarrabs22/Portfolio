@@ -8134,11 +8134,11 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: "Poppins", Arial, sans-serif;
-  background: #000000;
+  background: #fdf5e6;
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #999999; }
+  color: #333333; }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8158,14 +8158,14 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.5;
-  color: white;
+  color: #c3981f;
   font-weight: 400; }
 
 .text-primary {
   color: #ffbd39 !important; }
 
 .ftco-navbar-light {
-  background: transparent !important;
+  background: #333333 !important;
   position: absolute;
   top: 0;
   left: 0;
@@ -8173,7 +8173,7 @@ h1, h2, h3, h4, h5,
   z-index: 3; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
-      background: #000000 !important;
+      background: #333333 !important;
       position: relative;
       top: 0;
       padding-top: 0;
@@ -8192,7 +8192,7 @@ h1, h2, h3, h4, h5,
       color: #fff !important; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-brand {
-        color: #fff; } }
+        color: #aac6e2; } }
   @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav {
       padding-bottom: 20px;
@@ -8782,14 +8782,14 @@ h1, h2, h3, h4, h5,
       width: calc(100% - 130px); }
       .ftco-about ul.about-info li span:first-child {
         font-weight: 600;
-        color: #fff;
+        color: #211e11;
         width: 130px; }
 
 .ftco-about .counter-wrap .text p {
   font-size: 20px; }
   .ftco-about .counter-wrap .text p span {
     font-weight: 400;
-    color: #fff; }
+    color: #695629; }
   .ftco-about .counter-wrap .text p span.number {
     font-weight: 600;
     color: #ffbd39; }
@@ -9798,12 +9798,12 @@ textarea.form-control {
 }
 
 #home-section .text {
-  color: #fff;
+  color: #f4a261;
   z-index: 2;
 }
 
 #home-section .text h1 span {
-  color: #f4c04e; /* Highlighted color */
+  color: #333333; /* Highlighted color */
 }
 
 #home-section .img {
@@ -9839,6 +9839,174 @@ textarea.form-control {
   display: flex;
   align-items: stretch; /* Ensures children match the tallest element */
 }
+
+
+
+
+/* Contact Section */
+#contact-section {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+}
+
+/* Remove Light Background */
+#contact-section {
+  background-color: inherit; /* Matches the page background color */
+  padding: 50px 0;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in-up {
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.3s;
+}
+
+/* Contact Section Styling */
+#contact-section {
+  padding: 60px 0;
+  color: #333333;
+}
+
+.contact-detail {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-detail .icon {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.contact-detail p a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.contact-detail:hover {
+  color: #ffc107;
+  transform: translateY(-5px);
+}
+
+/* Contact Form */
+.contact-form .form-control {
+  background-color: #222;
+  color: #333333;
+  border: 1px solid #555;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #ffc107;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #ffc107;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.language-switcher {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.language-switcher button {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4b400;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.language-switcher button:hover {
+  background-color: #e09c00;
+}
+
+.project-card {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover img {
+  opacity: 0.8;
+}
+
+.project-card .project-info {
+  padding: 20px;
+}
+
+.project-card .project-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.project-card .project-info h3 i {
+  color: #ffd700;
+  margin-right: 10px;
+}
+
+.project-card .project-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
 
 
   
