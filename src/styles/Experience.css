@@ -1,0 +1,259 @@
+/* ==========================================
+   EXPERIENCE SECTION STYLES
+   ========================================== */
+
+.experience {
+  position: relative;
+  padding: var(--spacing-2xl) 0;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Timeline Marker */
+.timeline-marker {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.marker-dot {
+  width: 16px;
+  height: 16px;
+  background: var(--electric-blue);
+  border-radius: 50%;
+  border: 2px solid var(--cosmic-dark);
+  box-shadow: 0 0 12px var(--accent-glow);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-item:hover .marker-dot {
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  box-shadow: 0 0 22px var(--accent-glow);
+}
+
+.timeline-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, var(--electric-blue), transparent);
+  margin-top: 0.5rem;
+}
+
+/* Timeline Content */
+.timeline-content {
+  flex: 1;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  background: var(--surface-card-hover);
+  border-color: var(--electric-blue);
+  box-shadow: var(--shadow-soft), var(--shadow-glow);
+}
+
+.timeline-item.expanded .timeline-content {
+  background: var(--card-gradient-hover);
+  border-color: var(--electric-blue);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.experience-title {
+  margin: 0 0 0.5rem 0;
+  color: var(--star-white);
+  font-size: 1.2rem;
+}
+
+.experience-company {
+  margin: 0.25rem 0;
+  color: var(--electric-blue);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.experience-dates {
+  margin: 0.25rem 0 0 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.expand-icon {
+  color: var(--electric-blue);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  transition: transform 0.3s ease;
+}
+
+/* Expandable Details */
+.experience-details {
+  overflow: hidden;
+}
+
+.experience-description {
+  margin: var(--spacing-md) 0 var(--spacing-lg) 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.missions {
+  margin-bottom: var(--spacing-lg);
+}
+
+.missions h4,
+.tech-stack h4 {
+  color: var(--electric-blue);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1rem;
+}
+
+.missions ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.missions li {
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.missions li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--gold-accent);
+}
+
+.tech-stack {
+  margin-top: var(--spacing-lg);
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  background: var(--accent-soft);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: var(--accent-soft-hover);
+  border-color: var(--purple-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .timeline-item {
+    gap: 1.5rem;
+  }
+
+  .timeline-marker {
+    width: 32px;
+  }
+
+  .timeline-content {
+    padding: var(--spacing-md);
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .expand-icon {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .timeline-marker {
+    width: 28px;
+  }
+
+  .marker-dot {
+    width: 12px;
+    height: 12px;
+    border-width: 1.5px;
+  }
+
+  .timeline-content {
+    padding: var(--spacing-md);
+  }
+
+  .experience-title {
+    font-size: 1rem;
+  }
+
+  .experience-company {
+    font-size: 0.9rem;
+  }
+
+  .missions li {
+    padding-left: 1.2rem;
+  }
+
+  .tech-badges {
+    gap: 0.5rem;
+  }
+
+  .tech-badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+}

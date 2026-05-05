@@ -1,0 +1,132 @@
+/* ==========================================
+   APP MAIN STYLES
+   ========================================== */
+
+.App {
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text-primary);
+  transition:
+    background 0.45s ease,
+    color 0.3s ease;
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Section Spacing */
+section {
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+section + section {
+  border-top: 1px solid var(--border-color);
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: var(--spacing-2xl) 0;
+  border-top: 1px solid var(--border-color);
+  background: var(--surface-card);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-soft);
+  margin-top: var(--spacing-2xl);
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.footer-tagline {
+  margin: 0.5rem 0 0 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--electric-blue);
+  background: var(--surface-elevated);
+  color: var(--electric-blue);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 99;
+}
+
+.back-to-top:hover {
+  background: var(--electric-blue);
+  color: #ffffff;
+  box-shadow: var(--shadow-glow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .footer-text {
+    font-size: 0.95rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.85rem;
+  }
+
+  .back-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-md) 0;
+  }
+
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .back-to-top,
+  .navbar,
+  .footer {
+    display: none;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+}
