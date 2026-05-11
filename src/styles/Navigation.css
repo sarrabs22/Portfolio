@@ -41,7 +41,6 @@
 
 .nav-logo:hover {
   color: var(--gold-accent);
-  text-shadow: 0 0 14px var(--accent-glow);
 }
 
 .logo-icon {

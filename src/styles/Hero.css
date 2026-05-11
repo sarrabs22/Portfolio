@@ -59,11 +59,11 @@
 
 .hero-title {
   margin: 0;
-  background: linear-gradient(135deg, var(--electric-blue), var(--purple-accent), var(--gold-accent));
+  color: var(--star-white);
+  background: linear-gradient(135deg, var(--electric-blue), var(--purple-accent));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 24px var(--accent-glow));
 }
 
 .gradient-text {
