@@ -262,12 +262,21 @@
 }
 
 @media (max-width: 480px) {
+  .projects {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
   .card-content {
     padding: var(--spacing-md);
   }
 
   .project-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .card-footer {

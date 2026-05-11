@@ -203,8 +203,13 @@
 }
 
 @media (max-width: 480px) {
+  .about {
+    padding: var(--spacing-xl) 0;
+  }
+
   .about-grid {
-    gap: var(--spacing-md);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
   }
 
   .about-highlights {
@@ -215,13 +220,28 @@
     padding: var(--spacing-md);
   }
 
+  .highlight-box h3 {
+    font-size: 1rem;
+  }
+
   .about-stats {
     grid-template-columns: 1fr;
     padding: var(--spacing-md);
+    gap: var(--spacing-md);
   }
 
   .stat {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+
+  .stat h4 {
+    font-size: 1.5rem;
+  }
+
+  .about-intro,
+  .about-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 
   .stat h4 {

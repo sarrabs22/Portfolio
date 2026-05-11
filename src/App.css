@@ -81,7 +81,7 @@ section {
 /* Responsive */
 @media (max-width: 768px) {
   .footer {
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-lg) var(--spacing-md);
   }
 
   .footer-text {
@@ -95,22 +95,31 @@ section {
   .back-to-top {
     bottom: 1.5rem;
     right: 1.5rem;
-    width: 45px;
-    height: 45px;
-    font-size: 1.1rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    min-height: 44px;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: var(--spacing-md) 0;
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.8rem;
   }
 
   .back-to-top {
-    bottom: 1rem;
-    right: 1rem;
-    width: 40px;
-    height: 40px;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 44px;
+    height: 44px;
     font-size: 1rem;
   }
 }

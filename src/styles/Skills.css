@@ -197,12 +197,26 @@
 }
 
 @media (max-width: 480px) {
+  .skills {
+    padding: var(--spacing-xl) 0;
+  }
+
   .skills-grid {
+    grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
 
   .skill-category {
     padding: var(--spacing-md);
+  }
+
+  .category-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-item {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .skills-list {

@@ -217,18 +217,22 @@
 }
 
 @media (max-width: 480px) {
+  .experience {
+    padding: var(--spacing-xl) 0;
+  }
+
   .timeline-item {
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
 
   .timeline-marker {
-    width: 28px;
+    width: 30px;
   }
 
   .marker-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-width: 1.5px;
   }
 
@@ -237,14 +241,20 @@
   }
 
   .experience-title {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    margin-bottom: var(--spacing-sm);
   }
 
   .experience-company {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .experience-dates {
+    font-size: 0.85rem;
   }
 
   .missions li {
+    font-size: 0.9rem;
     padding-left: 1.2rem;
   }
 
