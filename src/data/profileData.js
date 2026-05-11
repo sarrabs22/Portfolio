@@ -12,10 +12,10 @@ export const profileData = {
   },
 
   about: {
-    summary: `Ingénieure en développement web full-stack avec un diplôme d'ingénieur de l'ESPRIT (Tunis) et une expérience académique en Allemagne. Spécialisée dans la conception et l'optimisation d'applications web performantes, l'intégration d'intelligence artificielle et l'automatisation des processus CI/CD.
+    summary: `Salut! Je suis développeuse web full-stack passionnée par la création de solutions qu'on utilise vraiment. Diplômée de l'ESPRIT (Tunis) avec une année d'échange en Allemagne, j'aime mélanger technologie et créativité pour résoudre des problèmes réels.
 
-Je combine expertise technique et approche créative pour développer des solutions innovantes. Motivée à mettre mes compétences au service d'une entreprise dynamique, particulièrement en France.`,
-    description: `Développeuse passionnée par la création d'expériences web modernes et performantes. Avec plus de 4 ans d'expérience en développement full-stack, je maîtrise les technologies front-end et back-end pour concevoir des applications complexes et scalables.`
+J'ai travaillé sur des projets variés – du développement d'ERPs médicaux au matching d'emplois avec IA. Ce que j'adore? Quand une bonne idée rencontre du code bien fait et qu'un utilisateur dit "ça marche vraiment mieux". Je cherche à rejoindre une équipe dynamique en France où je pourrai apporter cette perspective.`,
+    description: `Je suis quelqu'un qui aime transformer les idées en produits concrets. Full-stack par nature, j'ai touché à React, Angular, Node.js, Spring Boot... et j'ai appris qu'aucune techno n'est un dogme. Ce qui compte vraiment, c'est de créer quelque chose d'utile et maintenable.`
   },
 
   skills: {
@@ -35,12 +35,12 @@ Je combine expertise technique et approche créative pour développer des soluti
       company: 'Substances Actives',
       location: 'Paris, France',
       dates: '2025',
-      description: 'Participation au développement et à l\'optimisation de l\'ERP médical Matisse.',
+      description: 'Travailler sur un ERP médical, c\'est un vrai défi – des utilisateurs exigeants, des contraintes complexes, mais c\'était excitant!',
       missions: [
         'Développement de fonctionnalités avec Symfony et Stimulus.js',
-        'Amélioration des performances et de l\'expérience utilisateur',
-        'Implémentation de modules facilitant la gestion des flux',
-        'Réduction du temps de saisie de 40%'
+        'Réduction du temps de saisie des données de 40% (les utilisateurs ont remarqué!)',
+        'Amélioration des performances globales de l\'interface',
+        'Collaboration étroite avec les médecins et infirmières pour comprendre leurs vrais besoins'
       ],
       technologies: ['PHP', 'Symfony', 'Stimulus.js', 'HTML/CSS']
     },
@@ -50,12 +50,12 @@ Je combine expertise technique et approche créative pour développer des soluti
       company: 'Ipact Consult',
       location: 'Canada',
       dates: '2024',
-      description: 'Conception et développement de la plateforme Manajero.',
+      description: 'Manajero est un projet dont je suis fière – on a créé une plateforme de collaboration de zéro.',
       missions: [
-        'Conception de modules collaboratifs',
-        'Architecture frontend et backend',
-        'Adoption par 200+ utilisateurs',
-        'Augmentation de la productivité de 25%'
+        'Architecture complète du produit (frontend + backend)',
+        'Conception de modules collaboratifs vraiment intuitifs',
+        'Adoption par 200+ utilisateurs en peu de temps',
+        'Augmentation de la productivité des équipes de 25%'
       ],
       technologies: ['Angular', 'Spring Boot', 'MongoDB', 'REST API']
     },
@@ -65,13 +65,12 @@ Je combine expertise technique et approche créative pour développer des soluti
       company: 'SmartUp-3S',
       location: 'Tunis, Tunisie',
       dates: '2023',
-      description: 'Développement du backend d\'une application pharmaceutique.',
+      description: 'Mon premier vrai défi back-end – optimiser un système lourd et le rendre performant.',
       missions: [
-        'Implémentation de services REST avec Spring Boot',
-        'Gestion de base de données MySQL',
-        'Automatisation de l\'inventaire et reporting',
+        'Implémentation robuste d\'une API REST avec Spring Boot',
+        'Automatisation complète de la gestion d\'inventaire (bye bye Excel!)',
         'Réduction du temps de traitement de 25%',
-        'Amélioration des performances globales'
+        'Infrastructure stable pour la croissance'
       ],
       technologies: ['Java', 'Spring Boot', 'MySQL', 'REST API']
     }
@@ -81,47 +80,47 @@ Je combine expertise technique et approche créative pour développer des soluti
     {
       id: 1,
       title: 'Expense Splitter',
-      description: 'API REST complète pour la gestion et répartition des dépenses partagées, déployée en production.',
-      details: 'Conception et déploiement d\'une API REST dockerisée connectée à PostgreSQL cloud avec migrations automatisées.',
+      description: 'Une API REST pour partager les dépenses sans prise de tête – parce que "tu dois combien?" devrait être simple.',
+      details: 'API complète en production: Node.js, PostgreSQL, Prisma, Docker. Déployée sur Fly.io avec tous les bonnes pratiques (migrations, health checks, gestion des secrets).',
       technologies: ['Node.js', 'Express', 'PostgreSQL', 'Prisma', 'Docker', 'Fly.io'],
       year: '2026',
-      features: ['API REST complète', 'Déploiement cloud', 'Gestion des secrets', 'Health checks', 'Migrations DB']
+      features: ['API REST solide', 'Déploiement cloud automatisé', 'Base de données bien structurée', 'Ready for production']
     },
     {
       id: 2,
       title: 'Plateforme Opportunités Emploi',
-      description: 'Plateforme de matching emploi-candidat avec analyse d\'IA de CV.',
-      details: 'Conception et développement avec intégration d\'un modèle d\'IA pour l\'analyse automatique de CV et matching avec offres.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'IA/ML'],
+      description: 'Matching emploi-candidat avec IA – j\'ai découvert que les LLMs peuvent vraiment comprendre les CV!',
+      details: 'React + Node.js + MongoDB, avec intégration d\'IA pour analyser les CV et matcher automatiquement avec les offres. Plus de 100 lignes de code d\'export Excel!',
+      technologies: ['React', 'Node.js', 'MongoDB', 'LLMs'],
       year: '2024',
-      features: ['Analyse de CV par IA', 'Matching automatisé', 'Dashboard candidat', 'Gestion offres d\'emploi']
+      features: ['Analyse intelligente de CV', 'Matching automatisé', 'Dashboard candidat', 'Gestion des offres']
     },
     {
       id: 3,
-      title: 'Plateforme de Jardinage Urbain Durable',
-      description: 'Gestion d\'événements pour projets écologiques urbains.',
-      details: 'Développement d\'un module de gestion d\'événements associatifs optimisant l\'organisation de projets de jardinage urbain.',
+      title: 'Plateforme de Jardinage Urbain',
+      description: 'Aider les gens à organiser des projets d\'écologie urbaine – du code pour la planète 🌱',
+      details: 'Module de gestion d\'événements pour coordonner les projets de jardinage collectif. Simple mais efficace.',
       technologies: ['Laravel 9', 'MySQL', 'HTML/CSS'],
       year: '2024',
-      features: ['Gestion d\'événements', 'Calendrier', 'Organisation de projets', 'Gestion de participants']
+      features: ['Gestion d\'événements', 'Calendrier partagé', 'Organisation de projets', 'Communication du groupe']
     },
     {
       id: 4,
-      title: 'Pipeline CI/CD avec Jenkins',
-      description: 'Automatisation complète des processus de build et déploiement.',
-      details: 'Mise en place de pipelines Jenkins pour automatiser la construction, les tests et le déploiement.',
+      title: 'Pipeline CI/CD Jenkins',
+      description: 'Automatiser tout pour que les développeurs fassent juste du vrai développement.',
+      details: 'Pipelines Jenkins complètes: build → tests → déploiement. Parce que déployer à la main c\'est 2020 comme ambition.',
       technologies: ['Jenkins', 'Git', 'Docker', 'Shell'],
       year: '2024',
-      features: ['Pipelines automatisés', 'Tests continus', 'Déploiement automatisé', 'Réduction du temps de production']
+      features: ['Pipelines automatisées', 'Tests continus', 'Déploiement sans clics', 'Feedback rapide']
     },
     {
       id: 5,
-      title: 'Gestion des Résidences Universitaires',
-      description: 'Plateforme complète pour la gestion et communication au sein des résidences.',
-      details: 'Développement d\'un forum étudiant améliorant la communication entre étudiants et administration.',
+      title: 'Gestion Résidences Universitaires',
+      description: 'Un forum qui unit les étudiants et facilite la communication avec l\'admin.',
+      details: 'Spring Boot + Angular pour une plateforme complète de gestion résidences. Communication, modération, gestion – tout intégré.',
       technologies: ['Spring Boot', 'Angular', 'MySQL'],
       year: '2023 - 2024',
-      features: ['Forum étudiant', 'Gestion de résidences', 'Système de communication', 'Modération']
+      features: ['Forum communautaire', 'Gestion administrative', 'Modération', 'Communication fluide']
     }
   ],
 

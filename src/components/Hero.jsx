@@ -84,11 +84,11 @@ const Hero = ({ onCtaClick }) => {
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="hero-buttons">
             <button className="btn btn-primary" onClick={() => onCtaClick('projects')}>
-              <span>Explorer mes projets</span>
+              <span>Voir mes projets</span>
               <span className="arrow">↓</span>
             </button>
             <button className="btn btn-secondary" onClick={() => onCtaClick('contact')}>
-              <span>Contactez-moi</span>
+              <span>Parlons!</span>
               <span className="arrow">→</span>
             </button>
           </motion.div>

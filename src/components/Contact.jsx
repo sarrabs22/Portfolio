@@ -105,8 +105,8 @@ const Contact = () => {
 
           {/* Intro Text */}
           <motion.p variants={itemVariants} className="contact-intro">
-            Je suis actuellement à la recherche d'opportunités en développement web en France.
-            N'hésitez pas à me contacter pour discuter d'un projet ou d'une collaboration.
+            Vous avez une idée de projet? Une opportunité intéressante? Ou vous voulez juste parler tech?
+            Je suis toujours ouverte à une bonne conversation. Écrivez-moi! 👋
           </motion.p>
 
           {/* Two Column Layout */}

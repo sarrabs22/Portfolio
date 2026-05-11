@@ -56,16 +56,16 @@ const About = () => {
 
             <motion.div variants={itemVariants} className="about-highlights">
               <div className="highlight-box">
-                <h3>Formation</h3>
-                <p>Diplôme d'ingénieur de l'ESPRIT (Tunis) + Échange académique en Allemagne</p>
+                <h3>Parcours</h3>
+                <p>Ingénieure de l'ESPRIT + semestre en Allemagne. J'adore apprendre en voyageant!</p>
               </div>
               <div className="highlight-box">
-                <h3>Expertise</h3>
-                <p>Full-Stack Web Development, IA Integration, DevOps & Cloud</p>
+                <h3>Ce que je fais</h3>
+                <p>Full-Stack web, IA, DevOps. Je code en anglais, je pense en français, je déploie avec Docker.</p>
               </div>
               <div className="highlight-box">
-                <h3>Objectif</h3>
-                <p>Contribuer à des projets innovants en France</p>
+                <h3>Ma mission</h3>
+                <p>Créer du code qui marche vraiment et qui plaît aux utilisateurs. Rejoindre une équipe cool en France!</p>
               </div>
             </motion.div>
           </div>
@@ -74,15 +74,15 @@ const About = () => {
           <motion.div variants={itemVariants} className="about-stats">
             <div className="stat">
               <h4>1+</h4>
-              <p>Année d'expérience</p>
+              <p>An d'expérience pro</p>
             </div>
             <div className="stat">
               <h4>5</h4>
-              <p>Projets majeurs</p>
+              <p>Projets qui me rendent fière</p>
             </div>
             <div className="stat">
               <h4>15+</h4>
-              <p>Technologies maîtrisées</p>
+              <p>Techs que j'aime utiliser</p>
             </div>
           </motion.div>
         </motion.div>
