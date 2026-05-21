@@ -96,7 +96,6 @@ function App() {
               © 2025 Sarra Ben Sedrine. Développeuse Web Full-Stack.
             </p>
             <p className="footer-tagline">
-              Créé avec React + Vite + Framer Motion
             </p>
           </div>
         </div>

@@ -345,6 +345,7 @@
   }
 
   .contact-item {
+    align-items: flex-start;
     padding: var(--spacing-md);
     gap: var(--spacing-sm);
   }
@@ -357,6 +358,11 @@
 
   .contact-cta {
     padding: var(--spacing-md);
+  }
+
+  .contact-cta .btn,
+  .contact-form .btn {
+    width: 100%;
   }
 
   .social-links {

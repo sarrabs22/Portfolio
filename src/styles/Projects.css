@@ -685,12 +685,33 @@
 
 @media (max-width: 480px) {
   .projects {
-    --cf-card-w: 88vw;
-    --cf-card-h: 540px;
+    --cf-card-w: calc(100vw - 2rem);
+    --cf-card-h: auto;
+    --cf-gap: 16px;
+    padding-top: var(--spacing-lg);
+    overflow-x: clip;
+  }
+
+  .coverflow-section {
+    min-height: auto;
+    margin-top: var(--spacing-md);
+    padding-bottom: var(--spacing-xl);
+  }
+
+  .coverflow-sticky {
+    min-height: auto;
+    overflow: visible;
+    padding: 20px 0 28px;
   }
 
   .coverflow-header {
-    width: 88vw;
+    width: calc(100vw - 2rem);
+    gap: var(--spacing-sm);
+    margin-bottom: 8px;
+  }
+
+  .coverflow-header h3 {
+    font-size: 1.22rem;
   }
 
   .projects-focus-hint {
@@ -711,20 +732,84 @@
     font-size: 0.8rem;
   }
 
+  .coverflow-track-wrapper {
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+  }
+
+  .coverflow-track {
+    min-height: auto;
+    padding: 14px 0 42px;
+  }
+
+  .cf-card {
+    height: auto;
+    min-height: 0;
+  }
+
+  .cf-card.side-left,
+  .cf-card.side-right,
+  .cf-card.far-left,
+  .cf-card.far-right {
+    opacity: 0;
+    filter: blur(4px);
+    pointer-events: none;
+    transform: perspective(900px) scale(0.78);
+  }
+
   .cf-card-inner {
-    grid-template-rows: 220px 1fr;
+    grid-template-rows: 180px auto;
+    min-height: 0;
+    border-radius: var(--radius-lg);
+  }
+
+  .cf-card-visual {
+    padding: 0.75rem;
   }
 
   .cf-card-visual .interface-preview {
-    width: min(96%, 330px);
+    width: min(100%, 330px);
+  }
+
+  .cf-card-info {
+    padding: 1rem;
+  }
+
+  .cf-card-info h3 {
+    font-size: 1.12rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .cf-card-info p {
+    display: -webkit-box;
+    margin-top: 0.7rem;
+    overflow: hidden;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  .cf-tags {
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
   }
 
   .cf-tags span {
     font-size: 0.68rem;
+    white-space: normal;
   }
 
   .cf-meta {
+    gap: 0.35rem;
     font-size: 0.78rem;
+  }
+
+  .cf-cta {
+    margin-top: 0.95rem;
+    font-size: 0.86rem;
   }
 
   .drag-hint {
@@ -732,15 +817,27 @@
   }
 
   .project-preview-modal {
-    padding: var(--spacing-sm);
+    align-items: start;
+    padding: 0.75rem;
+    overflow-y: auto;
   }
 
   .project-preview-panel {
-    padding: var(--spacing-md);
+    width: 100%;
+    max-height: none;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .project-preview-close {
+    top: 0.7rem;
+    right: 0.7rem;
   }
 
   .filter-buttons {
     flex-direction: column;
+    width: 100%;
   }
 
   .filter-btn {

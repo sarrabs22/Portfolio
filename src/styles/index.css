@@ -10,6 +10,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 :root {
@@ -145,6 +146,18 @@ body {
   transition:
     background 0.45s ease,
     color 0.3s ease;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+  overflow-x: clip;
 }
 
 /* Typography */
@@ -367,8 +380,15 @@ textarea:focus-visible {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --spacing-md: 1rem;
+    --spacing-lg: 1.25rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 2.6rem;
+  }
+
   .container {
-    padding: 0 var(--spacing-md);
+    padding: 0 1rem;
   }
 
   h1 {
@@ -389,9 +409,11 @@ textarea:focus-visible {
   }
 
   .btn {
+    width: 100%;
     min-height: 44px;
     padding: 0.75rem 1.2rem;
     font-size: 0.95rem;
+    white-space: normal;
   }
 }
 

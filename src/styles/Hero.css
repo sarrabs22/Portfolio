@@ -243,16 +243,17 @@
 
 @media (max-width: 480px) {
   .hero {
-    min-height: auto;
-    padding: var(--spacing-xl) var(--spacing-md);
+    min-height: 100svh;
+    padding: 5.5rem 0 var(--spacing-xl);
   }
 
   .hero-title {
-    font-size: 1.75rem;
+    font-size: clamp(1.9rem, 12vw, 2.7rem);
+    line-height: 1.08;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.86rem;
     letter-spacing: 0.5px;
   }
 

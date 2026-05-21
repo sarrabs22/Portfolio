@@ -211,8 +211,8 @@ const Projects = () => {
         <div className="coverflow-sticky">
           <div className="coverflow-header">
             <div>
-              <p className="projects-focus-hint">Drag ou utilise les fleches</p>
-              <h3>Project coverflow</h3>
+              <p className="projects-focus-hint"></p>
+              <h3></h3>
             </div>
 
             <div className="coverflow-nav">

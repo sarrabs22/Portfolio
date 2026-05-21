@@ -249,7 +249,7 @@
 
 @media (max-width: 480px) {
   .navbar {
-    padding: var(--spacing-md) 0;
+    padding: 0.8rem 0;
   }
 
   .nav-logo {
@@ -258,7 +258,7 @@
   }
 
   .nav-menu-mobile {
-    top: 60px;
+    top: 58px;
     gap: 0;
     max-height: calc(100vh - 80px);
     overflow-y: auto;
@@ -276,5 +276,24 @@
   .hamburger {
     width: 40px;
     height: 40px;
+  }
+
+  .theme-toggle {
+    width: 52px;
+    height: 32px;
+  }
+
+  .theme-toggle-track {
+    width: 42px;
+    height: 22px;
+  }
+
+  .theme-toggle-thumb {
+    width: 16px;
+    height: 16px;
+  }
+
+  [data-theme="dark"] .theme-toggle-thumb {
+    transform: translateX(20px);
   }
 }

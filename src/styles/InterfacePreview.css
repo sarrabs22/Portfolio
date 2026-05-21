@@ -735,6 +735,14 @@
 }
 
 @media (max-width: 480px) {
+  .interface-preview::before {
+    opacity: 0.45;
+  }
+
+  .preview-window {
+    transform: none;
+  }
+
   .preview-screen {
     grid-template-columns: 42px 1fr;
     min-height: 190px;
@@ -750,6 +758,22 @@
 
   .preview-card-large {
     min-height: 80px;
+  }
+
+  .preview-image-frame,
+  .asset-image-preview.compact .preview-image-frame {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    transform: none;
+  }
+
+  .preview-image-frame img {
+    object-position: top left;
+  }
+
+  .preview-image-missing {
+    min-height: 180px;
+    padding: 0.85rem;
   }
 
   .matisse-shell,
