@@ -275,6 +275,12 @@
   --preview-c: #facc15;
 }
 
+.variant-commerce {
+  --preview-a: #e5e7eb;
+  --preview-b: #9ca3af;
+  --preview-c: #f5f5f4;
+}
+
 .variant-medical {
   --preview-a: #22d3ee;
   --preview-b: #14b8a6;

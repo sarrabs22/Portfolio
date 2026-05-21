@@ -8,6 +8,7 @@ opportunites-emploi.png
 jardinage-urbain.png
 pipeline-jenkins.png
 residences-universitaires.png
+monochrome-ecommerce.png
 matisse-substances-actives.png
 ```
 

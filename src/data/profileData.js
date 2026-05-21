@@ -87,6 +87,15 @@ J'ai travaillé sur des projets variés, du développement d'ERPs médicaux au m
       features: ['API REST solide', 'Déploiement cloud automatisé', 'Base de données bien structurée', 'Ready for production']
     },
     {
+      id: 6,
+      title: 'Monochrome E-commerce',
+      description: 'Boutique e-commerce mode développée en freelance, avec une expérience produit premium et une identité visuelle minimaliste.',
+      details: 'Projet freelance full-stack réalisé avec Angular, Spring Boot et MongoDB. J\'ai développé une interface e-commerce sombre et élégante, une page produit immersive, la gestion du panier et une base technique pensée pour gérer catalogue, produits et parcours d\'achat.',
+      technologies: ['Angular', 'Spring Boot', 'MongoDB'],
+      year: '2025',
+      features: ['Projet freelance', 'Page produit premium', 'Panier e-commerce', 'Catalogue connecté']
+    },
+    {
       id: 2,
       title: 'Plateforme Opportunités Emploi',
       description: 'Matching emploi-candidat avec IA, j\'ai découvert que les LLMs peuvent vraiment comprendre les CV!',

@@ -37,6 +37,12 @@ const projectPreviewVariants = {
     accent: '#60a5fa',
     image: 'project-previews/residences-universitaires.png',
   },
+  6: {
+    variant: 'commerce',
+    subtitle: 'Freelance fashion e-commerce',
+    accent: '#d4d4d4',
+    image: 'project-previews/monochrome-ecommerce.png',
+  },
 }
 
 const getCoverClass = (index, currentIndex) => {
@@ -182,8 +188,7 @@ const Projects = () => {
               <div className="constellation-line"></div>
             </div>
           </motion.div>
-
-          <motion.div variants={itemVariants} className="filter-buttons">
+{/*           <motion.div variants={itemVariants} className="filter-buttons">
             <motion.button
               className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
               onClick={() => setFilter('all')}
@@ -203,10 +208,9 @@ const Projects = () => {
                 {tech}
               </motion.button>
             ))}
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
-
       <div className="coverflow-section">
         <div className="coverflow-sticky">
           <div className="coverflow-header">
