@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { profileData } from '../data/profileData'
@@ -68,7 +68,9 @@ const Projects = () => {
   const [dragDelta, setDragDelta] = useState(0)
   const [isDragging, setIsDragging] = useState(false)
   const [hideHint, setHideHint] = useState(false)
+  const [trackOffset, setTrackOffset] = useState(null)
   const activeIndexRef = useRef(0)
+  const trackWrapperRef = useRef(null)
   const trackRef = useRef(null)
   const dragStartRef = useRef(0)
   const dragDeltaRef = useRef(0)
@@ -129,6 +131,39 @@ const Projects = () => {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [filteredProjects.length])
 
+  useLayoutEffect(() => {
+    const wrapper = trackWrapperRef.current
+    const track = trackRef.current
+    if (!wrapper || !track) return undefined
+
+    let frameId = null
+
+    const updateTrackOffset = () => {
+      const activeCard = track.children[activeIndex]
+      if (!activeCard) return
+
+      const wrapperCenter = wrapper.clientWidth / 2
+      const cardCenter = activeCard.offsetLeft + activeCard.offsetWidth / 2
+      setTrackOffset(wrapperCenter - cardCenter)
+    }
+
+    const scheduleUpdate = () => {
+      if (frameId) window.cancelAnimationFrame(frameId)
+      frameId = window.requestAnimationFrame(updateTrackOffset)
+    }
+
+    scheduleUpdate()
+
+    const resizeObserver = new ResizeObserver(scheduleUpdate)
+    resizeObserver.observe(wrapper)
+    resizeObserver.observe(track)
+
+    return () => {
+      if (frameId) window.cancelAnimationFrame(frameId)
+      resizeObserver.disconnect()
+    }
+  }, [activeIndex, filteredProjects.length])
+
   const startDrag = (clientX) => {
     setIsDragging(true)
     setHideHint(true)
@@ -162,7 +197,10 @@ const Projects = () => {
   }
 
   const trackStyle = {
-    transform: `translateX(calc((100vw - var(--cf-card-w)) / 2 - ${activeIndex} * (var(--cf-card-w) + var(--cf-gap)) + ${dragDelta}px))`,
+    transform:
+      trackOffset === null
+        ? `translateX(calc((100vw - var(--cf-card-w)) / 2 - ${activeIndex} * (var(--cf-card-w) + var(--cf-gap)) + ${dragDelta}px))`
+        : `translateX(${trackOffset + dragDelta}px)`,
   }
 
   const getPreview = (projectId) =>
@@ -244,7 +282,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="coverflow-track-wrapper">
+          <div className="coverflow-track-wrapper" ref={trackWrapperRef}>
             <div
               className={`coverflow-track ${isDragging ? 'dragging' : ''}`}
               ref={trackRef}
