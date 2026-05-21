@@ -83,9 +83,26 @@
   position: relative;
 }
 
+.edu-icon::before,
 .edu-icon::after {
-  content: '📚';
-  font-size: 1.2rem;
+  content: '';
+  position: absolute;
+  border: 1.8px solid var(--electric-blue);
+}
+
+.edu-icon::before {
+  width: 18px;
+  height: 22px;
+  border-radius: 4px 2px 2px 4px;
+  background: var(--accent-cyan-soft);
+  box-shadow: 6px 0 0 -1px var(--surface-card), 6px 0 0 0 var(--electric-blue);
+}
+
+.edu-icon::after {
+  width: 1px;
+  height: 18px;
+  border-width: 0 0 0 1.8px;
+  transform: translateX(3px);
 }
 
 .edu-content {

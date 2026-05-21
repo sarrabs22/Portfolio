@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { profileData } from '../data/profileData'
+import PortfolioIcon from './PortfolioIcon'
 import '../styles/Education.css'
 
 const Education = () => {
@@ -83,7 +84,9 @@ const Education = () => {
                         className="cert-item"
                         whileHover={{ scale: 1.02 }}
                       >
-                        <span className="cert-badge">✓</span>
+                        <span className="cert-badge" aria-hidden="true">
+                          <PortfolioIcon name="check" size={15} />
+                        </span>
                         <div>
                           <p className="cert-name">{cert.name}</p>
                           <p className="cert-meta">

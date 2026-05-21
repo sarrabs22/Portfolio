@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import StarsBackground from './StarsBackground'
 import { profileData } from '../data/profileData'
+import PortfolioIcon from './PortfolioIcon'
 import '../styles/Hero.css'
 
 const Hero = ({ onCtaClick }) => {
@@ -59,7 +60,7 @@ const Hero = ({ onCtaClick }) => {
           {/* Availability Badge */}
           <motion.div variants={itemVariants} className="hero-badge">
             <span className="badge available">
-              <span className="pulse-dot">●</span>
+              <span className="pulse-dot" aria-hidden="true"></span>
               {profileData.personal.availability}
             </span>
           </motion.div>
@@ -85,11 +86,11 @@ const Hero = ({ onCtaClick }) => {
           <motion.div variants={itemVariants} className="hero-buttons">
             <button className="btn btn-primary" onClick={() => onCtaClick('projects')}>
               <span>Voir mes projets</span>
-              <span className="arrow">↓</span>
+              <PortfolioIcon name="arrowDown" className="arrow" size={18} />
             </button>
             <button className="btn btn-secondary" onClick={() => onCtaClick('contact')}>
               <span>Parlons!</span>
-              <span className="arrow">→</span>
+              <PortfolioIcon name="arrowRight" className="arrow" size={18} />
             </button>
           </motion.div>
 

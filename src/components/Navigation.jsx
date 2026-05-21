@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import PortfolioIcon from './PortfolioIcon'
 import '../styles/Navigation.css'
 
 const navigationItems = [
@@ -106,7 +107,7 @@ const Navigation = ({ onNavClick, theme, onThemeToggle }) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="logo-icon">◇</span>
+            <PortfolioIcon name="sparkles" className="logo-icon" size={20} />
             <span className="logo-text">Sarra</span>
           </motion.div>
 
@@ -138,7 +139,7 @@ const Navigation = ({ onNavClick, theme, onThemeToggle }) => {
             >
               <span className="theme-toggle-track" aria-hidden="true">
                 <span className="theme-toggle-thumb">
-                  {theme === 'dark' ? '☀' : '☾'}
+                  <PortfolioIcon name={theme === 'dark' ? 'sun' : 'moon'} size={13} />
                 </span>
               </span>
             </motion.button>

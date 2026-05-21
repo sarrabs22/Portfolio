@@ -163,9 +163,13 @@
 }
 
 .methodology-badge::before {
-  content: '◇';
-  color: var(--gold-accent);
-  font-size: 0.8rem;
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--gold-accent);
+  border-radius: 2px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 8px rgba(255, 214, 10, 0.32);
 }
 
 .methodology-badge:hover {

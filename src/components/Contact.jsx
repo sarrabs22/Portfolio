@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from '../hooks/useInView'
 import { profileData } from '../data/profileData'
+import PortfolioIcon from './PortfolioIcon'
 import '../styles/Contact.css'
 
 const Contact = () => {
@@ -47,12 +48,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically send the form data to a backend
     console.log('Form submitted:', formData)
     setSubmitted(true)
 
-    // Reset form
-    setTimeout(() => {
+    window.setTimeout(() => {
       setFormData({ name: '', email: '', subject: '', message: '' })
       setSubmitted(false)
     }, 3000)
@@ -62,25 +61,25 @@ const Contact = () => {
     {
       label: 'Email',
       value: profileData.personal.email,
-      icon: '✉️',
+      icon: 'mail',
       href: `mailto:${profileData.personal.email}`,
     },
     {
-      label: 'Téléphone',
+      label: 'Telephone',
       value: profileData.personal.phone,
-      icon: '📱',
+      icon: 'phone',
       href: `tel:${profileData.personal.phone}`,
     },
     {
       label: 'LinkedIn',
       value: 'linkedin.com/in/sarra-ben-sedrine',
-      icon: '💼',
+      icon: 'linkedin',
       href: profileData.personal.linkedin,
     },
     {
       label: 'Localisation',
       value: profileData.personal.location,
-      icon: '📍',
+      icon: 'mapPin',
       href: '#',
     },
   ]
@@ -95,7 +94,6 @@ const Contact = () => {
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          {/* Section Title */}
           <motion.div variants={itemVariants} className="section-header">
             <h2>Contactez-moi</h2>
             <div className="header-divider">
@@ -103,15 +101,12 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Intro Text */}
           <motion.p variants={itemVariants} className="contact-intro">
-            Vous avez une idée de projet? Une opportunité intéressante? Ou vous voulez juste parler tech?
-            Je suis toujours ouverte à une bonne conversation. Écrivez-moi! 👋
+            Vous avez une idee de projet? Une opportunite interessante? Ou vous voulez juste parler
+            tech? Je suis toujours ouverte a une bonne conversation. Ecrivez-moi!
           </motion.p>
 
-          {/* Two Column Layout */}
           <div className="contact-grid">
-            {/* Contact Form */}
             <motion.div variants={itemVariants} className="contact-form-wrapper">
               <form onSubmit={handleSubmit} className="contact-form">
                 <div className="form-group">
@@ -173,7 +168,14 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   disabled={submitted}
                 >
-                  {submitted ? '✓ Message envoyé' : 'Envoyer le message'}
+                  {submitted ? (
+                    <>
+                      <PortfolioIcon name="check" size={18} />
+                      Message envoye
+                    </>
+                  ) : (
+                    'Envoyer le message'
+                  )}
                 </motion.button>
 
                 {submitted && (
@@ -182,25 +184,26 @@ const Contact = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                   >
-                    Merci pour votre message! Je vous répondrai bientôt.
+                    Merci pour votre message! Je vous repondrai bientot.
                   </motion.p>
                 )}
               </form>
             </motion.div>
 
-            {/* Contact Information */}
             <motion.div variants={itemVariants} className="contact-info">
-              <h3>Mes coordonnées</h3>
+              <h3>Mes coordonnees</h3>
 
               <div className="contact-items">
-                {contactLinks.map((link, idx) => (
+                {contactLinks.map((link) => (
                   <motion.a
-                    key={idx}
+                    key={link.label}
                     href={link.href}
                     className="contact-item"
                     whileHover={{ x: 8 }}
                   >
-                    <span className="contact-icon">{link.icon}</span>
+                    <span className="contact-icon" aria-hidden="true">
+                      <PortfolioIcon name={link.icon} size={22} />
+                    </span>
                     <div className="contact-details">
                       <p className="contact-label">{link.label}</p>
                       <p className="contact-value">{link.value}</p>
@@ -209,14 +212,10 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* CTA */}
-              <motion.div
-                className="contact-cta"
-                whileHover={{ y: -2 }}
-              >
-                <h4>Prêt à discuter?</h4>
+              <motion.div className="contact-cta" whileHover={{ y: -2 }}>
+                <h4>Pret a discuter?</h4>
                 <p>
-                  Je suis enthousiaste pour discuter de nouvelles opportunités et de projets
+                  Je suis enthousiaste pour discuter de nouvelles opportunites et de projets
                   innovants en France.
                 </p>
                 <motion.button
@@ -230,19 +229,21 @@ const Contact = () => {
             </motion.div>
           </div>
 
-          {/* Social Links */}
           <motion.div variants={itemVariants} className="social-links">
             <a href={profileData.personal.linkedin} target="_blank" rel="noopener noreferrer">
-              <span className="social-icon">in</span>
+              <span className="social-icon" aria-hidden="true">
+                <PortfolioIcon name="linkedin" size={22} />
+              </span>
             </a>
-            <a href="mailto:{profileData.personal.email}">
-              <span className="social-icon">✉</span>
+            <a href={`mailto:${profileData.personal.email}`}>
+              <span className="social-icon" aria-hidden="true">
+                <PortfolioIcon name="mail" size={22} />
+              </span>
             </a>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Decorative Background */}
       <div className="contact-decoration">
         <div className="pulse-circle pulse-1"></div>
         <div className="pulse-circle pulse-2"></div>

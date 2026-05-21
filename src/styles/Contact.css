@@ -142,9 +142,15 @@
 }
 
 .contact-icon {
-  font-size: 1.8rem;
-  min-width: 40px;
-  text-align: center;
+  display: grid;
+  place-items: center;
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--accent-cyan-soft);
+  color: var(--electric-blue);
 }
 
 .contact-details {
@@ -225,9 +231,10 @@
 }
 
 .social-icon {
+  display: grid;
+  place-items: center;
   color: var(--electric-blue);
   font-weight: 700;
-  font-size: 1.2rem;
 }
 
 /* Decorative Elements */
@@ -343,8 +350,9 @@
   }
 
   .contact-icon {
-    font-size: 1.5rem;
-    min-width: 35px;
+    flex-basis: 38px;
+    width: 38px;
+    height: 38px;
   }
 
   .contact-cta {

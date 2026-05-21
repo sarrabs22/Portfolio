@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import PortfolioIcon from './PortfolioIcon'
 import '../styles/SpaceGuideBot.css'
 
 const STORAGE_KEY = 'spaceGuideBotMode'
@@ -11,15 +12,17 @@ const SECTION_CONFIG = [
   {
     id: 'home',
     mood: 'greeting',
+    icon: 'sparkles',
     messages: [
-      'Bienvenue dans mon univers ✨',
-      'Je vais te guider dans cette mission 🚀',
+      'Bienvenue dans mon univers',
+      'Je vais te guider dans cette mission',
       `${BOT_NAME} guide activé.`,
     ],
   },
   {
     id: 'about',
     mood: 'reading',
+    icon: 'compass',
     messages: [
       'Voici l’histoire derrière le profil.',
       'Un parcours orienté produit, code et créativité.',
@@ -28,24 +31,27 @@ const SECTION_CONFIG = [
   {
     id: 'skills',
     mood: 'reading',
+    icon: 'wrench',
     messages: [
-      'Stack détectée 🛠️',
+      'Stack détectée',
       'Frontend, backend, data… explore les compétences.',
     ],
   },
   {
     id: 'experience',
     mood: 'reading',
+    icon: 'satellite',
     messages: [
-      'Mission log ouvert 🛰️',
+      'Mission log ouvert',
       'Chaque expérience raconte une progression.',
     ],
   },
   {
     id: 'projects',
     mood: 'excited',
+    icon: 'galaxy',
     messages: [
-      'Zone projets activée 🌌',
+      'Zone projets activée',
       'Clique sur une carte pour explorer.',
       'C’est ici que la créativité rencontre le code.',
       `${BOT_NAME} recommande les projets.`,
@@ -54,16 +60,18 @@ const SECTION_CONFIG = [
   {
     id: 'education',
     mood: 'reading',
+    icon: 'book',
     messages: [
-      'Base académique confirmée 📚',
+      'Base académique confirmée',
       'Formation, échange et apprentissage continu.',
     ],
   },
   {
     id: 'contact',
     mood: 'contact',
+    icon: 'mail',
     messages: [
-      'Prêt à collaborer ? 📩',
+      'Prêt à collaborer ?',
       'Tu peux passer à l’action ici.',
       'Un recruteur peut me contacter en quelques clics.',
     ],
@@ -77,9 +85,9 @@ const HOVER_MESSAGES = [
 ]
 
 const QUICK_ACTIONS = [
-  { id: 'projects', label: 'Voir mes projets' },
-  { id: 'skills', label: 'Voir mes compétences' },
-  { id: 'contact', label: 'Me contacter' },
+  { id: 'projects', label: 'Voir mes projets', icon: 'galaxy' },
+  { id: 'skills', label: 'Voir mes compétences', icon: 'wrench' },
+  { id: 'contact', label: 'Me contacter', icon: 'mail' },
 ]
 
 const clamp = (value, min, max) => Math.min(Math.max(value, min), max)
@@ -134,6 +142,7 @@ const SpaceGuideBot = () => {
       }, {}),
     []
   )
+  const messageIcon = sectionById[activeSection]?.icon || 'compass'
 
   const progressRadius = 45
   const progressCircumference = 2 * Math.PI * progressRadius
@@ -244,9 +253,9 @@ const SpaceGuideBot = () => {
         if (speed < 0.85 && displayMode === 'expanded') {
           showMessage('Lecture orbitale en cours…', { mood: 'reading' })
         } else if (scrollDelta > 0) {
-          showMessage('On continue l’exploration ↓', { mood: 'idle' })
+          showMessage('On continue l’exploration', { mood: 'idle' })
         } else {
-          showMessage('Retour vers les étoiles ↑', { mood: 'idle' })
+          showMessage('Retour vers les étoiles', { mood: 'idle' })
         }
       }
 
@@ -313,7 +322,7 @@ const SpaceGuideBot = () => {
         window.clearTimeout(projectsDwellTimer.current)
         if (nextSection === 'projects') {
           projectsDwellTimer.current = window.setTimeout(() => {
-            showMessage('Ce projet mérite un coup d’œil 👀', {
+            showMessage('Ce projet mérite un coup d’œil', {
               force: true,
               mood: 'excited',
               duration: 3600,
@@ -413,7 +422,12 @@ const SpaceGuideBot = () => {
             <span className="space-guide__eyebrow">
               {BOT_NAME} · {missionComplete ? 'mission complete' : mood}
             </span>
-            <p>{currentMessage}</p>
+            <div className="space-guide__bubble-content">
+              <span className="space-guide__message-icon" aria-hidden="true">
+                <PortfolioIcon name={messageIcon} size={17} />
+              </span>
+              <p>{currentMessage}</p>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -436,6 +450,7 @@ const SpaceGuideBot = () => {
                   className="space-guide__action"
                   onClick={() => scrollToSection(action.id)}
                 >
+                  <PortfolioIcon name={action.icon} size={15} />
                   {action.label}
                 </button>
               ))}
